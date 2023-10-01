@@ -1,0 +1,35 @@
+@use '../../styles/colors.module.scss'as *;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 100px 20px 100px;
+    color: $color__gray--3;
+    background: $color__background--navbar;
+    img {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 100%;
+    }
+    ul{
+        display: flex; 
+        align-items: center;
+    }
+    a {
+        font-size: 1.2em;
+        font-weight: 600;
+        padding-right: 2rem;
+    }
+
+    a:hover {
+        color: $color__white;
+    }
+
+    @media screen and (max-width: 320px) {
+        a {
+            display: none;
+        }
+    }
+}

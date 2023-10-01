@@ -1,0 +1,12 @@
+@use '../styles/colors.module.scss' as *;
+
+.background{
+    // background-color: $color__primary;
+    background: $color__background;
+}
+
+.container {
+    margin: 0 17% 50px;
+    align-items: center;
+    justify-content: center;
+}
