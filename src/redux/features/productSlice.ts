@@ -40,7 +40,7 @@ export const {
   setError,
 } = productSlice.actions;
 
-export const requestProducts = (state: RootState) => state.product.requestProducts
-export const requestCategories = (state: RootState) => state.product.requestCategories
+export const requestProducts = (state: RootState) => state.productReducer.requestProducts
+export const requestCategories = (state: RootState) => state.productReducer.requestCategories
 
 export default productSlice.reducer

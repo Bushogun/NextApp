@@ -1,17 +1,31 @@
 $color__primary: #000;
-$color__background: linear-gradient(217deg, rgba(0, 27, 50, 0.8), rgba(255,0,0,0) 70.71%),
+$color__background: #111;
+
+// repeating-linear-gradient(to bottom, transparent, transparent 5px, #111 5px, #111 10px),
+// repeating-linear-gradient(to right, #111, #111 5px, #111 5px, #222 10px);
+
+
+
+
+
+// $color__background--navbar: linear-gradient(0deg, rgba(226, 226, 226, 0) 53%, rgba(164, 164, 164, 0.25) 96%);
+$color__background--navbar: linear-gradient(217deg, rgba(0, 27, 50, 0.8), rgba(255,0,0,0) 70.71%),
 linear-gradient(127deg, rgba(15, 35, 68, 1), rgb(30, 16, 46) 70.71%),
 linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-$color__background--navbar: linear-gradient(0deg, rgba(226, 226, 226, 0) 53%, rgba(164, 164, 164, 0.25) 96%);
 $color__white: #fff;
 
 
 
 
-$color__gray--1: #222;
-$color__gray--2: #666;
-$color__gray--3: #999;
-$color__gray--4: #ccc;
+$color__gray--4: #222;
+$color__gray--3: #666;
+$color__gray--2: #999;
+$color__gray--1: #ccc;
 $color__green--1: #44941f;
 $color__blue--1:#3483fa;
 $color__blue--2:#7ca4df;
+
+
+//linear-gradient(217deg, rgba(0, 27, 50, 0.8), rgba(255,0,0,0) 70.71%),
+//linear-gradient(127deg, rgba(15, 35, 68, 1), rgb(30, 16, 46) 70.71%),
+//linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);

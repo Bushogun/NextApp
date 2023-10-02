@@ -8,15 +8,13 @@ export async function fetchProductData(
     requestCategories: string,
     limit: string,
 ) {
-    console.log(apiUrl+requestProducts)
+  
   try {
     dispatch(setLoading(true));
     const [responseProducts , responseCategories] = await Promise.all([
         fetch(apiUrl+requestProducts),
         fetch(apiUrl+requestCategories),
     ]);
-    console.log("responseProducts "+ responseProducts);
-    console.log("responseCategories "+ responseCategories);
 
     if (!responseProducts.ok || !responseCategories.ok ) {
       throw new Error('Error al cargar productos o categorías');

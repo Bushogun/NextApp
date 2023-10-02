@@ -1,25 +1,23 @@
 'use client'
 import { useEffect } from 'react';
-import { RootState } from "@/redux/store";
-import { useDispatch, useSelector } from 'react-redux';
 import { setProducts, setCategories, setLoading, setError } from '@/redux/features/productSlice';
 import { fetchProductData } from '@/utils/api-utils';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const useProductData = () => {
-  const dispatch = useDispatch();
-  const requestProducts = useSelector((state: RootState) => state.product.requestProducts);
-  const requestCategories = useSelector((state: RootState) => state.product.requestCategories);
-  const limit = useSelector((state: RootState) => state.product.selectLimit);
+  const dispatch = useAppDispatch();
+  const requestProducts = useAppSelector(state => state.productReducer.requestProducts);
+  const requestCategories = useAppSelector(state => state.productReducer.requestCategories);
+  const limit = useAppSelector(state => state.productReducer.selectLimit);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         dispatch(setLoading(true));
-
         const { products, categories }  = await fetchProductData(dispatch, requestProducts, requestCategories, limit);
 
-        dispatch(setProducts(products.results))
-        dispatch(setCategories(categories.results))
+        dispatch(setProducts(products))
+        dispatch(setCategories(categories))
 
         dispatch(setLoading(false));
       } catch (error) {
