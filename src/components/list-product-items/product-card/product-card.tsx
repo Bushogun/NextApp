@@ -1,6 +1,7 @@
 import React from 'react';
 import { IProduct } from '@/interfaces/i-product';
 import styles from './product-card.module.scss';
+import { capitalizeText } from '@/utils/string-utils';
 
 interface Props {
   product: IProduct;
@@ -11,16 +12,17 @@ export const Card = ({ product, onClick }: Props) => {
   return (
     <div className={styles.card_container} onClick={onClick}>
       <figure className={styles.card_figure}>
-        <span className={styles.card_bottom_text}>{product.category}</span>
+        <span className={styles.card_bottom_text}>{capitalizeText(product.category)}</span>
         <img
           className={styles.card_img}
           src={product.image} 
           alt={product.title}
+          title={product.title}
         />
       </figure>
       <p className={styles.card_container_info}>
         <span className={styles.card_info_title}>{product.title}</span>
-        <span className={styles.card_info_price}> <br /> $ {product.price}</span>
+        <span className={styles.card_info_price}>${product.price}</span>
       </p>
     </div>
   );

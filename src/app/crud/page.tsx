@@ -18,9 +18,14 @@ const crud = () => {
     <>
       {
         loading ? (
-          <p>Loading...</p>
+          <div className={styles.container_loading}>
+            <div className={styles.loading}></div>
+            <p>Loading...</p>
+          </div>
         ) : error ? (
-          <p>Error: {error}</p>
+          <div className={styles.container_loading}>
+            <p>Error: {error}</p>
+          </div>
         ) : (
           <div className={styles.container_body}>
             <div className={styles.filters_container}>

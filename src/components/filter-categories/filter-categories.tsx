@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './filter-categories.module.scss'
 import { useAppSelector } from '@/redux/hooks';
+import { capitalizeText } from '@/utils/string-utils';
 
 export const Categories = () => {
     const categories = useAppSelector(state => state.productReducer.categories);
@@ -19,7 +20,7 @@ export const Categories = () => {
                         id={`category-${index + 1}`}
                         type="radio"
                     />
-                    <label htmlFor={`category-${index + 1}`}>{category}</label>
+                    <label htmlFor={`category-${index + 1}`}>{capitalizeText(category)}</label>
                     </React.Fragment>
                 ))}
         </div>
