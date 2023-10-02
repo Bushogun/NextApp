@@ -1,5 +1,5 @@
 @use '../../styles/colors.module.scss' as *;
-.radio_input {
+.radio-input {
     padding-top: 2rem;
     display: flex;
     flex-direction: row;
@@ -9,11 +9,11 @@
     color: white;
   }
   
-  .radio_input input[type="radio"] {
+  .radio-input input[type="radio"] {
     display: none;
   }
   
-  .radio_input label {
+  .radio-input label {
     display: flex;
     font-weight: 700;
     align-items: center;
@@ -27,7 +27,7 @@
     transition: all 0.3s ease-in-out;
   }
   
-  .radio_input label:before {
+  .radio-input label:before {
     content: "";
     display: block;
     position: absolute;
@@ -42,12 +42,12 @@
     transition: all 0.3s ease-in-out;
   }
   
-  .radio_input input[type="radio"]:checked + label:before {
+  .radio-input input[type="radio"]:checked + label:before {
     background-color: green;
     top: 0;
   }
   
-  .radio_input input[type="radio"]:checked + label {
+  .radio-input input[type="radio"]:checked + label {
     background-color: $color__green;
     color: $color__black;
     border-color: $color__black;

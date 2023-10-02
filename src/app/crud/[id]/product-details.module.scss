@@ -1,18 +1,18 @@
 @use '../../../styles/colors.module.scss' as *;
 
-.container_details{
+.container-details{
     display: flex;
     padding: 8rem;
 
-    .container_img{
-        .card_img{
+    .container-img{
+        .card-img{
             width: 90%;
             height: 90%;
             padding-right: 2rem;
         }
     }
 
-    .container_data{
+    .container-data{
         .title{
             font-size: larger;
             font-weight: 700;
@@ -38,6 +38,6 @@
                 color: yellow; 
             }
         }
-        .rating_count{}
+        .rating-count{}
     }
 }

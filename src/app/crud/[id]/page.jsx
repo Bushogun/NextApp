@@ -40,24 +40,24 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className={styles.details}>
+    <div className={styles['details']}>
       {productDetails && (
         <div className={styles.container_details}>
 
-          <div className={styles.container_img}>
-            <img  className={styles.card_img} 
+          <div className={styles['container_img']}>
+            <img  className={styles['card_img']} 
               src={productDetails.image} 
               alt={productDetails.title}
               title={productDetails.title} />
           </div>
 
-          <div className={styles.container_data}>
-            <h2 className={styles.title}>{productDetails.title}</h2>
-            <p className={styles.description}>{productDetails.description}</p>
-            <p className={styles.category}>{productDetails.category}</p>
-            <p className={styles.price}>${productDetails.price}</p>
-            <div className={styles.rating}>{renderStars(productDetails.rate)}</div>
-            <p className={styles.rating_count}>{productDetails.count}</p>
+          <div className={styles['container-data']}>
+            <h2 className={styles['title']}>{productDetails.title}</h2>
+            <p className={styles['description']}>{productDetails.description}</p>
+            <p className={styles['category']}>{productDetails.category}</p>
+            <p className={styles['price']}>${productDetails.price}</p>
+            <div className={styles['rating']}>{renderStars(productDetails.rate)}</div>
+            <p className={styles['rating-count']}>{productDetails.count}</p>
           </div>
 
         </div>

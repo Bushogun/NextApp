@@ -13,13 +13,13 @@ const productSlice = createSlice({
       state.products = action.payload;
     },
     setSelectCategory: (state, action) => {
-        state.selectCategory = action.payload;
+      state.selectCategory = action.payload;
     },
     setSelectProduct: (state, action) => {
-        state.selectProduct = action.payload;
+      state.selectProduct = action.payload;
     },
     setSelectLimit: (state, action) => {
-        state.selectLimit = action.payload;
+      state.selectLimit = action.payload;
     },
     setLoading: (state, action) => {
       state.loading = action.payload;

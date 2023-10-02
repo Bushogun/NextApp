@@ -1,11 +1,11 @@
 export interface IProduct {
-    id:          number;
-    title:       string;
-    price:       number;
+    id: number;
+    title: string;
+    price: number;
     description: string;
-    category:    Category;
-    image:       string;
-    rating:      Rating;
+    category: Category;
+    image: string;
+    rating: Rating;
 }
 
 export enum Category {
@@ -16,6 +16,6 @@ export enum Category {
 }
 
 export interface Rating {
-    rate:  number;
+    rate: number;
     count: number;
 }

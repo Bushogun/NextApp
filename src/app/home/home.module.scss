@@ -1,22 +1,22 @@
 @use '../../styles/colors.module.scss' as *;
 
-section{
-    .container_hero{
-        margin: 50px 20px;
-        color: $color__white;
-        .title{
-            margin: 20px 10px;
-            font-size: 78px;
-        }
-        .subtitle{
-            margin: 20px 10px;
-            font-size: 15px;
-            
-        }
+.home-section {
+  .hero-container {
+    margin: 50px 20px;
+    color: $color__white;
+
+    .title {
+      margin: 20px 10px;
+      font-size: 78px;
     }
-}
 
-.home-button{
-    
-}
+    .subtitle {
+      margin: 20px 10px;
+      font-size: 15px;
+    }
+  }
 
+  .home-button {
+    // Estilos para el botón en la sección de inicio
+  }
+}

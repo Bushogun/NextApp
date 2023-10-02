@@ -1,13 +1,13 @@
 @use '../../styles/colors.module.scss'as *;
 
-.container_body {
+.container-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
 
-.cards_container {
+.cards-container {
   padding-top: 2rem;
   padding-bottom: 4rem;
 }
@@ -22,7 +22,7 @@
   }
 }
 
-.container_loading {
+.container-loading {
   color: $color__white;
   display: flex;
   flex-direction: column;

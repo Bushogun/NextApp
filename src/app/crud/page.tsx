@@ -16,20 +16,20 @@ const crud = () => {
     <>
       {
         loading ? (
-          <div className={styles.container_loading}>
+          <div className={styles['container-loading']}>
             <div className={styles.loading}></div>
             <p>Loading...</p>
           </div>
         ) : error ? (
-          <div className={styles.container_loading}>
+          <div className={styles['container-loading']}>
             <p>Error: {error}</p>
           </div>
         ) : (
-          <div className={styles.container_body}>
-            <div className={styles.filters_container}>
+          <div className={styles['container-body']}>
+            <div className={styles['filters-container']}>
               <Categories />
             </div>
-            <div className={styles.cards_container}>
+            <div className={styles['cards-container']}>
               <ListItems />
             </div>
           </div>

@@ -11,7 +11,7 @@ export const Categories = () => {
     }
 
     return (
-        <div className={styles.radio_input}>
+        <div className={styles['radio-input']}>
             {categories.map((category, index) => (
                     <React.Fragment key={index}>
                     <input

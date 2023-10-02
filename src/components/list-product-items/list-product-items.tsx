@@ -12,7 +12,7 @@ const ListItems = () => {
   }
 
   return (
-    <div className={styles.cards_container}>
+    <div className={styles['cards-container']}>
       {products.map((product: IProduct, index: number) => (
         <Card key={index} product={product} />
       ))}
