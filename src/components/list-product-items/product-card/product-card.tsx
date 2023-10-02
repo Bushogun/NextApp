@@ -25,7 +25,7 @@ export const Card = ({ product, onClick }: Props) => {
   return (
     <div className={styles['card-container']} onClick={selectedProductHandler}>
       <figure className={styles['card-figure']}>
-        <span className={styles['card-bottom_text']}>{capitalizeText(product.category)}</span>
+        <span className={styles['card-bottom-text']}>{capitalizeText(product.category)}</span>
         <img
           className={styles['card-img']}
           src={product.image}
@@ -33,7 +33,7 @@ export const Card = ({ product, onClick }: Props) => {
           title={product.title}
         />
       </figure>
-      <p className={styles['card-container_info']}>
+      <p className={styles['card-container-info']}>
         <span className={styles['card-info-title']}>{product.title}</span>
         <span className={styles['card-info-price']}>${product.price}</span>
       </p>
