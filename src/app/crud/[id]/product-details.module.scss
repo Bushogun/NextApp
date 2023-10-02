@@ -1,0 +1,43 @@
+@use '../../../styles/colors.module.scss' as *;
+
+.container_details{
+    display: flex;
+    padding: 8rem;
+
+    .container_img{
+        .card_img{
+            width: 90%;
+            height: 90%;
+            padding-right: 2rem;
+        }
+    }
+
+    .container_data{
+        .title{
+            font-size: larger;
+            font-weight: 700;
+        }
+        .category{
+            padding: 1rem;
+            font-weight: 700;
+            color: $color__white;
+            background-color: $color__green--opacity;
+
+        }
+        .description{}
+        .price{
+            font-size: x-large;
+        }
+        .rating{
+            font-size: x-large;
+            .star {
+                color: #ccc;
+            }
+              
+            .filled {
+                color: yellow; 
+            }
+        }
+        .rating_count{}
+    }
+}

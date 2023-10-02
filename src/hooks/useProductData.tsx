@@ -1,7 +1,8 @@
+// useProductData.js
 'use client'
 import { useEffect } from 'react';
 import { setProducts, setCategories, setLoading, setError } from '@/redux/features/productSlice';
-import { fetchProductData } from '@/utils/api-utils';
+import { fetchProducts, fetchCategories } from '@/utils/api-utils';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const useProductData = () => {
@@ -13,21 +14,20 @@ const useProductData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        dispatch(setLoading(true));
-        const { products, categories }  = await fetchProductData(dispatch, requestProducts, requestCategories, limit);
+        const products = await fetchProducts(dispatch, requestProducts);
+        const categories = await fetchCategories(dispatch, requestCategories);
 
-        dispatch(setProducts(products))
-        dispatch(setCategories(categories))
-
+        dispatch(setProducts(products));
+        dispatch(setCategories(categories));
         dispatch(setLoading(false));
       } catch (error) {
         dispatch(setError('Busca algo antes de filtrar'));
         dispatch(setLoading(false));
       }
     };
-
     fetchData();
   }, [requestProducts, requestCategories, limit]);
 };
+
 
 export default useProductData;

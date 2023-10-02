@@ -14,8 +14,8 @@ export const Navbar = () => {
                     src="/crab-image.png"
                     alt="Crab Space Invaders"
                     title="Logo FakeCompany"
-                    width="70"
-                    height="55"
+                    width="60"
+                    height="45"
                     priority={true}
                 />
             </Link>
