@@ -1,11 +1,11 @@
 import { setLoading } from '@/redux/features/productSlice';
-import { apiUrl } from '@/api/index';
 import type { AppDispatch } from "@/redux/store";
 
 const fetchData = async (url: string, dispatch: AppDispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await fetch(apiUrl + url);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${url}`);
+    console.log (`${process.env.NEXT_PUBLIC_API_URL}+${url}`)
 
     if (!response.ok) {
       throw new Error(`Error al cargar datos desde ${url}`);

@@ -7,18 +7,17 @@ import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const useProductData = () => {
   const dispatch = useAppDispatch();
-  const requestProducts = useAppSelector(state => state.productReducer.requestProducts);
-  const requestCategories = useAppSelector(state => state.productReducer.requestCategories);
-  const limit = useAppSelector(state => state.productReducer.selectLimit);
+  const requestCategories = process.env.NEXT_PUBLIC_REQUEST_CATEGORIES!;
+  const requestProducts = process.env.NEXT_PUBLIC_REQUEST_PRODUCTS!;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const products = await fetchProducts(dispatch, requestProducts);
         const categories = await fetchCategories(dispatch, requestCategories);
-
+        const products = await fetchProducts(dispatch, requestProducts);
+        const categoriesWithTodos: string[] = ['All', ...categories];
         dispatch(setProducts(products));
-        dispatch(setCategories(categories));
+        dispatch(setCategories(categoriesWithTodos));
         dispatch(setLoading(false));
       } catch (error) {
         dispatch(setError('Busca algo antes de filtrar'));
@@ -26,7 +25,7 @@ const useProductData = () => {
       }
     };
     fetchData();
-  }, [requestProducts, requestCategories, limit]);
+  }, [requestProducts, requestCategories]);
 };
 
 

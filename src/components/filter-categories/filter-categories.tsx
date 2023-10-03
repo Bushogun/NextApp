@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './filter-categories.module.scss'
 import { useAppSelector } from '@/redux/hooks';
 import { capitalizeText } from '@/utils/string-utils';
@@ -9,6 +9,7 @@ export const Categories = () => {
     if (categories.length === 0) {
         return null;
     }
+
 
     return (
         <div className={styles['radio-input']}>

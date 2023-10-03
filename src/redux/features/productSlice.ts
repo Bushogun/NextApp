@@ -18,9 +18,6 @@ const productSlice = createSlice({
     setSelectProduct: (state, action) => {
       state.selectProduct = action.payload;
     },
-    setSelectLimit: (state, action) => {
-      state.selectLimit = action.payload;
-    },
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
@@ -35,12 +32,8 @@ export const {
   setProducts,
   setSelectCategory,
   setSelectProduct,
-  setSelectLimit,
   setLoading,
   setError,
 } = productSlice.actions;
-
-export const requestProducts = (state: RootState) => state.productReducer.requestProducts
-export const requestCategories = (state: RootState) => state.productReducer.requestCategories
 
 export default productSlice.reducer
