@@ -1,5 +1,3 @@
-
-
 # E-Commerce Test
 
 Before starting you must check if you have a node version equal to or greater than 16 (do it with the "npm -v" command) and an npm version equal to or greater than 9 (do it with the "npm -v" command)
@@ -8,7 +6,7 @@ Before starting you must check if you have a node version equal to or greater th
 2. Right click -> Extract here
 3. Open folder in Visual Studio Code
 4. New terminal (ctrl + shift + ñ)
-5. Run the command "cd RocktFyNexApp" and the command "npm i"
+5. Run the command "npm i"
 6. Run the command "npm run dev"
 7. Go to "http://localhost:3000/home" on you browser
 
