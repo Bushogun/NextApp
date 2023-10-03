@@ -1,7 +1,7 @@
 // useProductData.js
 'use client'
 import { useEffect } from 'react';
-import { setProducts, setCategories, setLoading, setError } from '@/redux/features/productSlice';
+import { setProducts, setCategories, setLoading, setError, setSelectCategory } from '@/redux/features/productSlice';
 import { fetchProducts, fetchCategories } from '@/utils/api-utils';
 import { useAppDispatch } from '@/redux/hooks';
 
@@ -13,6 +13,7 @@ const useProductData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        dispatch(setSelectCategory("All"));
         const categories = await fetchCategories(dispatch, requestCategories);
         const products = await fetchProducts(dispatch, requestProducts);
         const categoriesWithAll: string[] = ['All', ...categories];

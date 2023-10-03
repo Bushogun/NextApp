@@ -4,13 +4,15 @@ const Home = () => {
   return (
     <section className={styles['home-section']}>
       <div className={styles['hero-container']}>
-        <h1 className={styles.title}>Bienvenidos a mi Prueba técnica</h1>
+        <h1 className={styles.title}>¡Bienvenidos!</h1>
         <h2 className={styles.subtitle}>
-          Bienvenidos a mi Prueba técnica abrochen sus cinturones, asegúrense de encontrarse de preferencia en una silla reclinable
+          Gracias por tomarse el tiempo de hacer una revisión de este código!
+          <br/> 
+          <br/> 
+          En esta aplicación (en la sección de CRUD) encontrará una data consumida de un API llamado FakeStore,
+          y se despliega la data, podrás filtrar, acceder a un producto en específico para ver sus detalles.
+          ¡Explora y disfruta!
         </h2>
-        <button className={styles['home-button']}>
-          Get Started
-        </button>
       </div>
     </section>
   );

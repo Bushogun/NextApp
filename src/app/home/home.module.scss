@@ -4,6 +4,8 @@
   .hero-container {
     margin: 50px 20px;
     color: $color__white;
+    text-align: center;
+    padding-top: 15%;
 
     .title {
       margin: 20px 10px;
@@ -12,11 +14,11 @@
 
     .subtitle {
       margin: 20px 10px;
-      font-size: 15px;
+      color: $color__gray--2;
+      font-size: 25px;
     }
   }
-
-  .home-button {
-    // Estilos para el botón en la sección de inicio
-  }
+  @media screen and (max-width: 320px) {}
+  @media screen and (max-width: 422px) {}
+  @media screen and (max-width: 768px) {}
 }

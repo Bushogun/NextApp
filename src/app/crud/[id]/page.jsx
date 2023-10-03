@@ -42,10 +42,10 @@ const ProductDetails = () => {
   return (
     <div className={styles['details']}>
       {productDetails && (
-        <div className={styles.container_details}>
+        <div className={styles['container-details']}>
 
-          <div className={styles['container_img']}>
-            <img  className={styles['card_img']} 
+          <div className={styles['container-img']}>
+            <img  className={styles['card-img']} 
               src={productDetails.image} 
               alt={productDetails.title}
               title={productDetails.title} />

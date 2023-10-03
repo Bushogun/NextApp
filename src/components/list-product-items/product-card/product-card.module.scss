@@ -7,24 +7,16 @@
     border-radius: 0.5rem;
     cursor: pointer;
     background-color: $color__white;
-    
-    // --glow-color: rgb(7, 239, 73);
-    // --glow-spread-color: rgba(14, 235, 44, 0.781);
-    // --enhanced-glow-color: rgb(231, 206, 255);
-    // --btn-color: rgb(100, 61, 136);
-    // border: .01em solid var(--glow-color);
-    // box-shadow: 0 0 .5em .1em var(--glow-color),
-    //        0 0 .1em .1em var(--glow-spread-color),
-    //        inset 0 0 .1em .1em var(--glow-color);
+    &:hover {
+        border: 3px solid $color__gray--4; 
+      }
 
     .card-figure {
         display: flex;
-        align-items: center;
         position: relative;
         margin-bottom: 30px;
         width: 100%;
         height: 80%;
-        
     }
 
     .card-bottom-text {
@@ -43,6 +35,7 @@
 
     .card-img {
         width: 100%;
+        max-width: 300px;
         object-fit: cover;
         border-radius: 0.5rem;
     }
@@ -64,4 +57,13 @@
             color: $color__red--1;
         }
     }
+    @media screen and (max-width: 1200px) {
+        .card-figure {
+            margin-bottom: 0px;
+        }
+        .card-container-info {
+            padding: 5px;
+        }
+    }
+
 }

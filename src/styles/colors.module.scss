@@ -1,10 +1,12 @@
 $color__white: #fff;
 $color__black: #000;
-$color__background: #01091b;
+$color__background: #000;
 
-$color__background--navbar: linear-gradient(217deg, rgba(0, 27, 50, 0.8), rgba(255, 0, 0, 0) 70.71%),
-linear-gradient(127deg, rgba(15, 35, 68, 1), rgb(30, 16, 46) 70.71%),
-linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+$color__background--navbar: #01091b;
+
+// linear-gradient(217deg, rgba(0, 27, 50, 0.8), rgba(255, 0, 0, 0) 70.71%),
+// linear-gradient(127deg, rgba(15, 35, 68, 1), rgb(30, 16, 46) 70.71%),
+// linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
 
 $color__red--1: #da0000;
 $color__gray--1: #ccc;

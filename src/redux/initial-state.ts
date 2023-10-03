@@ -9,7 +9,7 @@ export interface StoreProduct {
   export const initialStateProductStore: StoreProduct = {
     categories: [],
     products: [],
-    selectCategory: "",
+    selectCategory: "All",
     selectProduct: "",
     loading: false,
     error: null,

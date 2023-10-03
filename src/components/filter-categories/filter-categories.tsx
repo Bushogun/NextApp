@@ -10,6 +10,7 @@ import { fetchProductsFiltered } from '@/utils/api-utils';
 export const Categories = () => {
     const dispatch = useAppDispatch();
     const categories = useAppSelector((state) => state.productReducer.categories);
+    const selectedCategoryRe = useAppSelector((state) => state.productReducer.selectCategory);
     const [selectedCategoryLocal, setSelectedCategoryLocal] = useState<string>('');
 
     useEffect(() => {
@@ -20,8 +21,8 @@ export const Categories = () => {
 
     const fetchProductsFilteredCategories = async () => {
         try {
-            const productDetailsById = await fetchProductsFiltered(dispatch, selectedCategoryLocal);
-            dispatch(setProducts(productDetailsById));
+            const productsFiltered = await fetchProductsFiltered(dispatch, selectedCategoryLocal);
+            dispatch(setProducts(productsFiltered));
         } catch (error) {
             dispatch(setError('ha ocurrido un error en el servidor'));
         }
@@ -45,7 +46,7 @@ export const Categories = () => {
                         name="category-radio"
                         id={`category-${index + 1}`}
                         type="radio"
-                        checked={selectedCategoryLocal === category}
+                        checked={selectedCategoryRe === category }
                         onChange={() => handleCategoryChange(category)}
                     />
                     <label htmlFor={`category-${index + 1}`}>{capitalizeText(category)}</label>
