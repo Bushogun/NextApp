@@ -7,8 +7,8 @@ const Home = () => {
         <h1 className={styles.title}>¡Bienvenidos!</h1>
         <h2 className={styles.subtitle}>
           Gracias por tomarse el tiempo de hacer una revisión de este código!
-          <br/> 
-          <br/> 
+          <br />
+          <br />
           En esta aplicación (en la sección de CRUD) encontrará una data consumida de un API llamado FakeStore,
           y se despliega la data, podrás filtrar, acceder a un producto en específico para ver sus detalles.
           ¡Explora y disfruta!

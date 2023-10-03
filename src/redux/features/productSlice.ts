@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { RootState } from "../store";
 import { initialStateProductStore } from "@/redux/initial-state";
 
 const productSlice = createSlice({

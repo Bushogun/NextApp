@@ -34,10 +34,10 @@ export const fetchProductById = async (dispatch: AppDispatch, productId: string)
 };
 
 export const fetchProductsFiltered = async (dispatch: AppDispatch, idFilter: string) => {
-  if (idFilter==="All"){
+  if (idFilter === "All") {
     const url = `${process.env.NEXT_PUBLIC_REQUEST_PRODUCTS}`;
-  return fetchData(url, dispatch);
-  }else{
+    return fetchData(url, dispatch);
+  } else {
     const url = `${process.env.NEXT_PUBLIC_REQUEST_CATEGORY}${idFilter}`;
     return fetchData(url, dispatch);
   }

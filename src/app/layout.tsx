@@ -15,16 +15,16 @@ export const metadata: Metadata = {
   description: 'Next App to Rocketfy',
 }
 
-function RootLayout(props: Props)  {
+function RootLayout(props: Props) {
   return (
     <html lang="en">
       <meta name="author" content="Jonathan Stiven Soto Pantoja" />
       <body className={styles.background}>
         <Navbar />
         <div className={styles.container}>
-        <Providers>
-          {props.children}
-        </Providers>
+          <Providers>
+            {props.children}
+          </Providers>
         </div>
       </body>
     </html>

@@ -1,43 +1,49 @@
-@use '../../../styles/colors.module.scss' as *;
+@use '../../../styles/colors.module.scss'as *;
 
-.container-details{
+.container-details {
     display: flex;
     padding: 2rem;
 
-    .container-img{
-        .card-img{
+    .container-img {
+        .card-img {
             width: 90%;
             height: 90%;
             padding-right: 2rem;
         }
     }
 
-    .container-data{
-        .title{
+    .container-data {
+        .title {
             font-size: larger;
             font-weight: 700;
         }
-        .category{
+
+        .category {
             padding: 1rem;
             font-weight: 700;
             color: $color__white;
             background-color: $color__green--opacity;
 
         }
-        .description{}
-        .price{
+
+        .description {}
+
+        .price {
             font-size: x-large;
         }
-        .rating{
+
+        .rating {
             font-size: x-large;
+
             .star {
                 color: #ccc;
             }
-              
+
             .filled {
-                color: yellow; 
+                color: yellow;
             }
         }
-        .rating-count{}
+
+        .rating-count {}
     }
 }

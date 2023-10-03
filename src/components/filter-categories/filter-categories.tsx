@@ -14,10 +14,10 @@ export const Categories = () => {
     const [selectedCategoryLocal, setSelectedCategoryLocal] = useState<string>('');
 
     useEffect(() => {
-        if (selectedCategoryLocal) {  
+        if (selectedCategoryLocal) {
             fetchProductsFilteredCategories();
-          }
-        }, [selectedCategoryLocal]);
+        }
+    }, [selectedCategoryLocal]);
 
     const fetchProductsFilteredCategories = async () => {
         try {
@@ -46,7 +46,7 @@ export const Categories = () => {
                         name="category-radio"
                         id={`category-${index + 1}`}
                         type="radio"
-                        checked={selectedCategoryRe === category }
+                        checked={selectedCategoryRe === category}
                         onChange={() => handleCategoryChange(category)}
                     />
                     <label htmlFor={`category-${index + 1}`}>{capitalizeText(category)}</label>

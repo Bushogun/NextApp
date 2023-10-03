@@ -20,7 +20,7 @@ const About = () => {
         width="450"
         height="650"
       />
-  </div>
+    </div>
   )
 }
 

@@ -1,4 +1,4 @@
-@use '../../styles/colors.module.scss' as *;
+@use '../../styles/colors.module.scss'as *;
 
 .home-section {
   .hero-container {
@@ -18,7 +18,5 @@
       font-size: 25px;
     }
   }
-  @media screen and (max-width: 320px) {}
-  @media screen and (max-width: 422px) {}
-  @media screen and (max-width: 768px) {}
+
 }
