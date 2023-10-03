@@ -25,20 +25,6 @@ const ProductDetails = () => {
     }
   };
 
-  const renderStars = (rate) => {
-    const stars = [];
-    const maxRating = 5;
-    for (let i = 1; i <= maxRating; i++) {
-      stars.push(
-        <span key={i} className={i <= rate ? 'star filled' : 'star'}>
-          &#9733;
-        </span>
-      );
-    }
-
-    return stars;
-  };
-
   return (
     <div className={styles['details']}>
       {productDetails && (
@@ -54,10 +40,10 @@ const ProductDetails = () => {
           <div className={styles['container-data']}>
             <h2 className={styles['title']}>{productDetails.title}</h2>
             <p className={styles['description']}>{productDetails.description}</p>
+            <div className={styles['category-container']}>
             <p className={styles['category']}>{productDetails.category}</p>
-            <p className={styles['price']}>${productDetails.price}</p>
-            <div className={styles['rating']}>{renderStars(productDetails.rate)}</div>
-            <p className={styles['rating-count']}>{productDetails.count}</p>
+            </div>
+              <p className={styles['price']}>${productDetails.price}</p>
           </div>
 
         </div>
