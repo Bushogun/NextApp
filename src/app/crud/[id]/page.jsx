@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchProductById } from '@/utils/api-utils';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import { setError, setSelectedProductById } from '@/redux/features/productSlice';
+import { setError } from '@/redux/features/productSlice';
 import styles from './product-details.module.scss'
 
 const ProductDetails = () => {

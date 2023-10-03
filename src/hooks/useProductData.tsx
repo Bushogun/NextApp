@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { setProducts, setCategories, setLoading, setError } from '@/redux/features/productSlice';
 import { fetchProducts, fetchCategories } from '@/utils/api-utils';
-import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import { useAppDispatch } from '@/redux/hooks';
 
 const useProductData = () => {
   const dispatch = useAppDispatch();
@@ -15,12 +15,12 @@ const useProductData = () => {
       try {
         const categories = await fetchCategories(dispatch, requestCategories);
         const products = await fetchProducts(dispatch, requestProducts);
-        const categoriesWithTodos: string[] = ['All', ...categories];
+        const categoriesWithAll: string[] = ['All', ...categories];
         dispatch(setProducts(products));
-        dispatch(setCategories(categoriesWithTodos));
+        dispatch(setCategories(categoriesWithAll));
         dispatch(setLoading(false));
       } catch (error) {
-        dispatch(setError('Busca algo antes de filtrar'));
+        dispatch(setError('Hubo un error en la conexión'));
         dispatch(setLoading(false));
       }
     };
