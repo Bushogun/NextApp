@@ -1,4 +1,3 @@
-// useProductData.js
 'use client'
 import { useEffect } from 'react';
 import { setProducts, setCategories, setLoading, setError, setSelectCategory } from '@/redux/features/productSlice';
